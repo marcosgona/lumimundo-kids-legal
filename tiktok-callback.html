@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>TikTok authorization | LumiMundo Kids</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><nav><img src="app-icon.png" alt=""><strong>LumiMundo Kids</strong></nav></header>
+  <main>
+    <h1>Completing TikTok authorization…</h1>
+    <p id="status">Returning securely to the LumiMundo Kids application on this device.</p>
+    <p class="note">Keep the local application running until authorization is complete.</p>
+  </main>
+  <footer>© 2026 LumiMundo Kids</footer>
+  <script>
+    (() => {
+      const target = "http://127.0.0.1:8090/api/oauth/tiktok/callback" + window.location.search;
+      document.getElementById("status").textContent = "Redirecting to the local application…";
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
